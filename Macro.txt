@@ -1,0 +1,35 @@
+Sub new_init()
+
+    Dim sc As SlicerCache
+
+    Set sc = ActiveWorkbook.SlicerCaches("Slicer_Region")
+
+    On Error Resume Next
+
+    If Sheet1.Range("A1").Value Then
+        sc.PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable1")
+    Else
+        sc.PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable1")
+    End If
+
+    If Sheet1.Range("D1").Value Then
+        sc.PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable2")
+    Else
+        sc.PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable2")
+    End If
+
+    If Sheet1.Range("G1").Value Then
+        sc.PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable3")
+    Else
+        sc.PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable3")
+    End If
+
+    If Sheet1.Range("J1").Value Then
+        sc.PivotTables.AddPivotTable Sheet1.PivotTables("PivotTable4")
+    Else
+        sc.PivotTables.RemovePivotTable Sheet1.PivotTables("PivotTable4")
+    End If
+
+    On Error GoTo 0
+
+End Sub
