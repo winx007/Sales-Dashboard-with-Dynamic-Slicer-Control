@@ -118,7 +118,7 @@ End Sub
 ```text
 Sales-Dashboard/
 │
-├── Project File.xlsx          # Main spreadsheet template
+├── Project File.xlsm          # Main spreadsheet template
 ├── Macro.vba                  # VBA macro source code
 ├── README.md                  # Project documentation
 └── Screenshots/
